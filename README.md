@@ -1,4 +1,4 @@
-# DevNDesign 🚀
+# DevNDesign 
 
 A freelancing platform that connects **developers and designers with clients** to collaborate on tech and design projects.
 
