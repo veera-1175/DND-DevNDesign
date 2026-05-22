@@ -1,133 +1,107 @@
-# DevNDesign 
+# DevNDesign (DND)
 
-A freelancing platform that connects **developers and designers with clients** to collaborate on tech and design projects.
+### Freelancing marketplace for developers, designers, and clients
 
-## 📌 Project Overview
+[![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?logo=php&logoColor=white)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![HTML5](https://img.shields.io/badge/Frontend-HTML%2FCSS%2FJS-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-DevNDesign is a web-based freelancing platform designed to help clients find skilled developers and designers for their projects. The platform allows clients to post jobs, freelancers to apply for projects, and both parties to collaborate efficiently through a secure and user-friendly interface.
+> Post projects, apply as a freelancer, collaborate with file exchange — a classic marketplace product built as a full PHP/MySQL web app with role-based access and hardened auth.
 
-The system focuses on **simplicity, security, and responsive design**, ensuring a smooth experience across desktop and mobile devices.
-
----
-
-## ✨ Features
-
-*  User registration and login system
-*  Role-based access (Client / Freelancer)
-*  Job posting and job application system
-*  Search and filtering for projects
-*  File upload and download support
-*  Secure authentication and session management
-*  Responsive UI for all devices
+Solo-built by **[Veerasegaran V P](https://github.com/veera-1175)** — an independent freelancing-platform product focused on clarity, security, and a usable client ↔ freelancer loop.
 
 ---
 
-## 🛠 Tech Stack
+## Product overview
 
-**Frontend**
+**DevNDesign** connects two sides of freelance work:
 
-* HTML
-* CSS
-* JavaScript
+| Role | What they can do |
+|------|------------------|
+| **Client** | Register, post jobs, review applicants, manage projects |
+| **Freelancer** | Browse / filter jobs, apply, exchange files, track work |
 
-**Backend**
-
-* PHP
-
-**Database**
-
-* MySQL
-
-**Server**
-
-* Apache (XAMPP)
-
-**Development Tools**
-
-* Visual Studio Code
+The system is designed for **simplicity and trust**: session auth, hashed passwords, prepared statements, and responsive pages that work on desktop and mobile.
 
 ---
 
-## 🔒 Security Features
+## Features
 
-* Password hashing using `password_hash()`
-* Protection against SQL Injection using **Prepared Statements**
-* Session-based authentication
-* Role-based access control
+- Registration & login with secure password hashing
+- Role-based access (Client / Freelancer)
+- Job posting and applications
+- Search & filtering for projects
+- File upload / download for collaboration
+- Session-based authentication
+- Responsive UI across devices
 
 ---
 
-## ⚙️ Installation & Setup
+## Security
 
-### 1️⃣ Clone the repository
+| Practice | Implementation |
+|----------|----------------|
+| Password storage | `password_hash()` / `password_verify()` |
+| SQL injection | Prepared statements |
+| Access control | Session + role checks on protected pages |
+| Sessions | Server-side session management |
+
+---
+
+## Tech stack
+
+| Layer | Tech |
+|-------|------|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | PHP |
+| Database | MySQL |
+| Local runtime | Apache (XAMPP / similar) |
+
+---
+
+## Quick start
 
 ```bash
-git clone https://github.com/your-username/devndesign.git
+git clone https://github.com/veera-1175/DND-DevNDesign.git
 ```
 
-### 2️⃣ Move project to XAMPP
+1. Copy the project into your Apache document root (e.g. `xampp/htdocs/DND-DevNDesign`).
+2. Start **Apache** and **MySQL**.
+3. Create the database and import the provided SQL schema (see `database/` or `*.sql` in the repo).
+4. Update DB credentials in the PHP config / connection file.
+5. Open `http://localhost/DND-DevNDesign` (path depends on your folder name).
 
-Copy the project folder into:
+---
 
-```
-xampp/htdocs/
-```
-
-### 3️⃣ Start XAMPP
-
-Start:
-
-* Apache
-* MySQL
-
-### 4️⃣ Import Database
-
-1. Open **phpMyAdmin**
-2. Create a new database
-3. Import the provided `.sql` file
-
-### 5️⃣ Run the project
-
-Open your browser and visit:
+## Project layout
 
 ```
-http://localhost/devndesign
+DND-DevNDesign/
+├── *.php                 # Pages & handlers
+├── css / js / assets     # Frontend
+├── uploads/              # Shared files (gitignored if present)
+├── database/ or *.sql    # Schema
+└── README.md
 ```
 
 ---
 
-## 📂 Project Structure
+## Interview walkthrough
 
-```
-DevNDesign
-│
-├── css
-├── js
-├── images
-├── uploads
-├── includes
-├── database
-├── index.php
-├── login.php
-├── register.php
-└── dashboard.php
-```
+| Topic | Talking point |
+|-------|----------------|
+| Domain | Two-sided marketplace — clients hire, freelancers apply |
+| Backend fundamentals | PHP sessions, CRUD, file I/O, MySQL |
+| Security | Hashing, prepared statements, RBAC |
+| UX | Role-aware navigation and responsive layouts |
 
-## 📈 Future Improvements
-
-* Real-time chat between clients and freelancers
-* Payment gateway integration
-* Rating and review system
-* Notification system
+**Demo path:** register client → post job → register freelancer → apply → show file exchange.
 
 ---
 
-## 👨‍💻 Author
+## License
 
-**Veerasegaran V P**
+MIT © [Veerasegaran V P](https://github.com/veera-1175)
 
----
-
-## 📄 License
-
-This project is for **educational and demonstration purposes**.
+**DevNDesign** — hire talent, ship projects.
