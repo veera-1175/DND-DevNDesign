@@ -9,7 +9,7 @@
 
 > Post projects, apply as a freelancer, collaborate with file exchange — a classic marketplace product built as a full PHP/MySQL web app with role-based access and hardened auth.
 
-Built by **[veera](https://github.com/veera-1175)**.
+Built by **[Veera](https://github.com/veera-1175)**.
 
 ---
 
@@ -102,6 +102,6 @@ DND-DevNDesign/
 
 ## License
 
-MIT © [veera](https://github.com/veera-1175)
+MIT © [Veera](https://github.com/veera-1175)
 
 **DevNDesign** — hire talent, ship projects.
